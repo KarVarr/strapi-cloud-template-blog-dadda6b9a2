@@ -1,0 +1,74 @@
+{
+    "collectionName": "listings",
+    "info": {
+      "singularName": "listing",
+      "pluralName": "listings",
+      "displayName": "Listing",
+      "description": "Объявление недвижимости"
+    },
+    "options": {
+      "draftAndPublish": true
+    },
+    "attributes": {
+      "title": { "type": "string", "required": true },
+      "description": { "type": "richtext" },
+      "price": { "type": "decimal" },
+      "currency": {
+        "type": "enumeration",
+        "enum": ["USD", "AMD", "EUR"]
+      },
+      "property_type": {
+        "type": "enumeration",
+        "enum": ["apartment", "house", "garage", "land", "commercial", "room", "event_venue"]
+      },
+      "deal_type": {
+        "type": "enumeration",
+        "enum": ["sale", "long_term_rent", "short_term_rent"]
+      },
+      "images": {
+        "type": "media",
+        "multiple": true
+      },
+      "building_info": {
+        "type": "component",
+        "repeatable": false,
+        "component": "property.building-info"
+      },
+      "apartment_info": {
+        "type": "component",
+        "repeatable": false,
+        "component": "property.apartment-info"
+      },
+      "land_info": {
+        "type": "component",
+        "repeatable": false,
+        "component": "property.land-info"
+      },
+      "garage_info": {
+        "type": "component",
+        "repeatable": false,
+        "component": "property.garage-info"
+      },
+      "commercial_info": {
+        "type": "component",
+        "repeatable": false,
+        "component": "property.commercial-info"
+      },
+      "features": {
+        "type": "component",
+        "repeatable": true,
+        "component": "shared.feature"
+      },
+      "price_history": {
+        "type": "component",
+        "repeatable": true,
+        "component": "meta.price-change"
+      },
+      "contact": {
+        "type": "component",
+        "repeatable": false,
+        "component": "shared.contact"
+      }
+    }
+  }
+  
