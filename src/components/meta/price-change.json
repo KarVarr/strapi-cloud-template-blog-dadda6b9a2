@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_meta_price_changes",
+    "info": {
+      "displayName": "Price Change",
+      "icon": "dollar-sign"
+    },
+    "attributes": {
+      "date": { "type": "date" },
+      "price": { "type": "decimal" },
+      "change": { "type": "decimal" },
+      "direction": {
+        "type": "enumeration",
+        "enum": ["increase", "decrease"]
+      }
+    }
+  }
+  

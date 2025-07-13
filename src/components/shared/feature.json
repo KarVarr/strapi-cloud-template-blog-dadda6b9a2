@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_shared_features",
+    "info": {
+      "displayName": "Feature",
+      "icon": "check"
+    },
+    "attributes": {
+      "name": {
+        "type": "enumeration",
+        "enum": ["elevator", "air_conditioner", "refrigerator", "video_surveillance", "security", "furniture", "wifi"]
+      },
+      "value": { "type": "boolean" }
+    }
+  }
+  

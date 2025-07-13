@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_property_commercial_infos",
+    "info": {
+      "displayName": "Commercial Info",
+      "icon": "store"
+    },
+    "attributes": {
+      "commercial_type": {
+        "type": "enumeration",
+        "enum": ["office", "store", "warehouse", "restaurant", "hotel", "auto_service", "multifunctional"]
+      },
+      "area": { "type": "decimal" },
+      "floor": { "type": "integer" },
+      "infrastructure": { "type": "text" }
+    }
+  }
+  

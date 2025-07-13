@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_property_garage_infos",
+    "info": {
+      "displayName": "Garage Info",
+      "icon": "car"
+    },
+    "attributes": {
+      "garage_type": {
+        "type": "enumeration",
+        "enum": ["garage", "parking"]
+      },
+      "area": { "type": "decimal" }
+    }
+  }
+  

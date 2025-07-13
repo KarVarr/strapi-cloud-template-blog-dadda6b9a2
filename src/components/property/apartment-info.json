@@ -1,0 +1,26 @@
+{
+    "collectionName": "components_property_apartment_infos",
+    "info": {
+      "displayName": "Apartment Info",
+      "icon": "home"
+    },
+    "attributes": {
+      "rooms": { "type": "integer" },
+      "bathrooms": { "type": "integer" },
+      "area": { "type": "decimal" },
+      "floor": { "type": "integer" },
+      "ceiling_height": { "type": "decimal" },
+      "balcony": { "type": "boolean" },
+      "renovation_type": {
+        "type": "enumeration",
+        "enum": ["design", "standard", "no"]
+      },
+      "furniture": { "type": "boolean" },
+      "appliances": { "type": "text" },
+      "view": {
+        "type": "enumeration",
+        "enum": ["yard", "city", "park"]
+      }
+    }
+  }
+  

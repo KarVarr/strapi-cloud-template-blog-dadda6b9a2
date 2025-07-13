@@ -1,0 +1,23 @@
+{
+    "collectionName": "components_property_building_infos",
+    "info": {
+      "displayName": "Building Info",
+      "icon": "building",
+      "description": ""
+    },
+    "attributes": {
+      "construction_type": {
+        "type": "enumeration",
+        "enum": ["monolith", "panel", "brick"]
+      },
+      "is_new": { "type": "boolean" },
+      "floors_total": { "type": "integer" },
+      "has_elevator": { "type": "boolean" },
+      "infrastructure": { "type": "text" },
+      "parking_type": {
+        "type": "enumeration",
+        "enum": ["open", "underground", "none"]
+      }
+    }
+  }
+  

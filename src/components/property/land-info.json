@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_property_land_infos",
+    "info": {
+      "displayName": "Land Info",
+      "icon": "tree"
+    },
+    "attributes": {
+      "area": { "type": "decimal" },
+      "land_type": {
+        "type": "enumeration",
+        "enum": ["residential", "agricultural", "industrial", "public", "mixed"]
+      }
+    }
+  }
+  

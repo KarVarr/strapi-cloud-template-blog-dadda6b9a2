@@ -1,0 +1,15 @@
+{
+    "collectionName": "components_shared_contacts",
+    "info": {
+      "displayName": "Contact",
+      "icon": "user"
+    },
+    "attributes": {
+      "name": { "type": "string" },
+      "phone": { "type": "string" },
+      "email": { "type": "email" },
+      "is_agency": { "type": "boolean" },
+      "registered_on": { "type": "date" }
+    }
+  }
+  
