@@ -402,6 +402,68 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiListingListing extends Struct.CollectionTypeSchema {
+  collectionName: 'listings';
+  info: {
+    description: '\u041E\u0431\u044A\u044F\u0432\u043B\u0435\u043D\u0438\u0435 \u043D\u0435\u0434\u0432\u0438\u0436\u0438\u043C\u043E\u0441\u0442\u0438';
+    displayName: 'Listing';
+    pluralName: 'listings';
+    singularName: 'listing';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    apartment_info: Schema.Attribute.Component<
+      'property.apartment-info',
+      false
+    >;
+    building_info: Schema.Attribute.Component<'property.building-info', false>;
+    commercial_info: Schema.Attribute.Component<
+      'property.commercial-info',
+      false
+    >;
+    contact: Schema.Attribute.Component<'shared.contact', false>;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    currency: Schema.Attribute.Enumeration<['USD', 'AMD', 'RUB', 'EUR']>;
+    deal_type: Schema.Attribute.Enumeration<
+      ['sale', 'long_term_rent', 'short_term_rent']
+    >;
+    description: Schema.Attribute.RichText;
+    features: Schema.Attribute.Component<'shared.feature', true>;
+    garage_info: Schema.Attribute.Component<'property.garage-info', false>;
+    images: Schema.Attribute.Media<undefined, true>;
+    land_info: Schema.Attribute.Component<'property.land-info', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::listing.listing'
+    > &
+      Schema.Attribute.Private;
+    location: Schema.Attribute.Component<'shared.contact', false>;
+    price: Schema.Attribute.Decimal;
+    price_history: Schema.Attribute.Component<'meta.price-change', true>;
+    property_type: Schema.Attribute.Enumeration<
+      [
+        'apartment',
+        'house',
+        'garage',
+        'land',
+        'commercial',
+        'room',
+        'event_venue',
+      ]
+    >;
+    publishedAt: Schema.Attribute.DateTime;
+    title: Schema.Attribute.String & Schema.Attribute.Required;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -912,6 +974,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::about.about': ApiAboutAbout;
+      'api::listing.listing': ApiListingListing;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
