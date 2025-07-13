@@ -1,4 +1,5 @@
 {
+  "kind": "collectionType",
   "collectionName": "listings",
   "info": {
     "singularName": "listing",
@@ -9,6 +10,7 @@
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {},
   "attributes": {
     "title": {
       "type": "string",
@@ -17,25 +19,35 @@
     "description": {
       "type": "richtext"
     },
-    "price": {
-      "type": "decimal"
-    },
-    "currency": {
-      "type": "enumeration",
-      "enum": ["USD", "AMD", "RUB", "EUR"]
+    "multicurrencyprice": {
+      "type": "component",
+      "component": "meta.multi-currency-price",
+      "repeatable": false
     },
     "property_type": {
       "type": "enumeration",
-      "enum": ["apartment", "house", "garage", "land", "commercial", "room", "event_venue"]
+      "enum": [
+        "apartment",
+        "house",
+        "garage",
+        "land",
+        "commercial",
+        "room",
+        "event_venue"
+      ]
     },
     "deal_type": {
       "type": "enumeration",
-      "enum": ["sale", "long_term_rent", "short_term_rent"]
+      "enum": [
+        "sale",
+        "long_term_rent",
+        "short_term_rent"
+      ]
     },
     "location": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.contact"
+      "component": "shared.contact",
+      "repeatable": false
     },
     "images": {
       "type": "media",
@@ -44,43 +56,43 @@
     },
     "building_info": {
       "type": "component",
-      "repeatable": false,
-      "component": "property.building-info"
+      "component": "property.building-info",
+      "repeatable": false
     },
     "apartment_info": {
       "type": "component",
-      "repeatable": false,
-      "component": "property.apartment-info"
+      "component": "property.apartment-info",
+      "repeatable": false
     },
     "land_info": {
       "type": "component",
-      "repeatable": false,
-      "component": "property.land-info"
+      "component": "property.land-info",
+      "repeatable": false
     },
     "garage_info": {
       "type": "component",
-      "repeatable": false,
-      "component": "property.garage-info"
+      "component": "property.garage-info",
+      "repeatable": false
     },
     "commercial_info": {
       "type": "component",
-      "repeatable": false,
-      "component": "property.commercial-info"
+      "component": "property.commercial-info",
+      "repeatable": false
     },
     "features": {
       "type": "component",
-      "repeatable": true,
-      "component": "shared.feature"
+      "component": "shared.feature",
+      "repeatable": true
     },
     "price_history": {
       "type": "component",
-      "repeatable": true,
-      "component": "meta.price-change"
+      "component": "meta.price-change",
+      "repeatable": true
     },
     "contact": {
       "type": "component",
-      "repeatable": false,
-      "component": "shared.contact"
+      "component": "shared.contact",
+      "repeatable": false
     }
   }
 }

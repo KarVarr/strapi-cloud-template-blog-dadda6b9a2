@@ -427,7 +427,6 @@ export interface ApiListingListing extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    currency: Schema.Attribute.Enumeration<['USD', 'AMD', 'RUB', 'EUR']>;
     deal_type: Schema.Attribute.Enumeration<
       ['sale', 'long_term_rent', 'short_term_rent']
     >;
@@ -443,7 +442,10 @@ export interface ApiListingListing extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     location: Schema.Attribute.Component<'shared.contact', false>;
-    price: Schema.Attribute.Decimal;
+    multicurrencyprice: Schema.Attribute.Component<
+      'meta.multi-currency-price',
+      false
+    >;
     price_history: Schema.Attribute.Component<'meta.price-change', true>;
     property_type: Schema.Attribute.Enumeration<
       [

@@ -1,5 +1,17 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface MetaMultiCurrencyPrice extends Struct.ComponentSchema {
+  collectionName: 'components_meta_multi_currency_prices';
+  info: {
+    displayName: 'Multi Currency Price';
+  };
+  attributes: {
+    price_amd: Schema.Attribute.Decimal;
+    price_rub: Schema.Attribute.Decimal;
+    price_usd: Schema.Attribute.Decimal;
+  };
+}
+
 export interface MetaPriceChange extends Struct.ComponentSchema {
   collectionName: 'components_meta_price_changes';
   info: {
@@ -205,6 +217,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'meta.multi-currency-price': MetaMultiCurrencyPrice;
       'meta.price-change': MetaPriceChange;
       'property.apartment-info': PropertyApartmentInfo;
       'property.building-info': PropertyBuildingInfo;

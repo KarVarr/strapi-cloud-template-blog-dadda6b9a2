@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_meta_multi_currency_prices",
+  "info": {
+    "displayName": "Multi Currency Price"
+  },
+  "options": {},
+  "attributes": {
+    "price_usd": {
+      "type": "decimal"
+    },
+    "price_amd": {
+      "type": "decimal"
+    },
+    "price_rub": {
+      "type": "decimal"
+    }
+  },
+  "config": {}
+}
