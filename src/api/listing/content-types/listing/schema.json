@@ -19,11 +19,6 @@
     "description": {
       "type": "richtext"
     },
-    "multicurrencyprice": {
-      "type": "component",
-      "component": "meta.multi-currency-price",
-      "repeatable": false
-    },
     "property_type": {
       "type": "enumeration",
       "enum": [
@@ -44,9 +39,14 @@
         "short_term_rent"
       ]
     },
-    "location": {
+    "location_info": {
       "type": "component",
-      "component": "shared.contact",
+      "component": "property.location",
+      "repeatable": false
+    },
+    "multicurrencyprice": {
+      "type": "component",
+      "component": "meta.multi-currency-price",
       "repeatable": false
     },
     "images": {

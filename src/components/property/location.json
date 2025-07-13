@@ -1,0 +1,29 @@
+{
+    "collectionName": "components_shared_location",
+    "info": {
+      "displayName": "Location"
+    },
+    "options": {},
+    "attributes": {
+      "country": {
+        "type": "string",
+        "default": "Armenia"
+      },
+      "city": {
+        "type": "string"
+      },
+      "street": {
+        "type": "string"
+      },
+      "building_number": {
+        "type": "string"
+      },
+      "latitude": {
+        "type": "decimal"
+      },
+      "longitude": {
+        "type": "decimal"
+      }
+    }
+  }
+  

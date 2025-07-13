@@ -441,7 +441,7 @@ export interface ApiListingListing extends Struct.CollectionTypeSchema {
       'api::listing.listing'
     > &
       Schema.Attribute.Private;
-    location: Schema.Attribute.Component<'shared.contact', false>;
+    location_info: Schema.Attribute.Component<'property.location', false>;
     multicurrencyprice: Schema.Attribute.Component<
       'meta.multi-currency-price',
       false

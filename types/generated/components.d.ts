@@ -115,6 +115,21 @@ export interface PropertyLandInfo extends Struct.ComponentSchema {
   };
 }
 
+export interface PropertyLocation extends Struct.ComponentSchema {
+  collectionName: 'components_shared_location';
+  info: {
+    displayName: 'Location';
+  };
+  attributes: {
+    building_number: Schema.Attribute.String;
+    city: Schema.Attribute.String;
+    country: Schema.Attribute.String & Schema.Attribute.DefaultTo<'Armenia'>;
+    latitude: Schema.Attribute.Decimal;
+    longitude: Schema.Attribute.Decimal;
+    street: Schema.Attribute.String;
+  };
+}
+
 export interface SharedContact extends Struct.ComponentSchema {
   collectionName: 'components_shared_contacts';
   info: {
@@ -224,6 +239,7 @@ declare module '@strapi/strapi' {
       'property.commercial-info': PropertyCommercialInfo;
       'property.garage-info': PropertyGarageInfo;
       'property.land-info': PropertyLandInfo;
+      'property.location': PropertyLocation;
       'shared.contact': SharedContact;
       'shared.feature': SharedFeature;
       'shared.media': SharedMedia;
